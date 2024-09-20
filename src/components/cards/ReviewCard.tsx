@@ -1,7 +1,8 @@
 export default function ReviewCard() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <h1> sde</h1>
+      <p> d </p>
+    </div>
+  );
 }

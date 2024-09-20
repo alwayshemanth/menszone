@@ -11,7 +11,7 @@ async function allCategories() {
     },
   });
 
-  console.log(getAllCategories);
+  // console.log(getAllCategories);
   return getAllCategories;
 }
 

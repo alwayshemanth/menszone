@@ -18,9 +18,9 @@ export default async function AddProductAction(formData: FormData) {
       },
     });
 
-    console.log("Success")
-    console.log(addProduct)
-    console.log("Success")
+    // console.log("Success")
+    // console.log(addProduct)
+    // console.log("Success")
 
     return addProduct;
   } catch (error) {

@@ -5,9 +5,9 @@ import { CiShoppingCart } from "react-icons/ci";
 
 export default function NavBar() {
   return (
-    <nav className="flex items-center justify-between p-4 h-16 bg-gray-700 text-white">
+    <nav className="flex items-center justify-between p-4 h-16 bg-gray-700 text-white sticky top-0 z-50">
       {/* Logo Section */}
-      <div className="flex-shrink-0">
+      <div className="">
         <h1 className="font-bold"> Mens Zone </h1>
       </div>
 
