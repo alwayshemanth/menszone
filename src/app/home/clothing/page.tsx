@@ -1,7 +1,21 @@
-export default function sports() {
+
+import CategoryProducts from "@/components/categories/CategoryProducts";
+import TopBar from "@/components/landing-page/TopBar";
+
+export default function Sports() {
     return (
-        <div>
-            this is sports page
+        // <div className="flex flex-row h-full bg-slate-400 pl-40 pr-40">
+        //     <div className="w-1/4">
+        //         <FilterCard />
+        //     </div>
+        //     <div className="w-3/4 overflow-y-auto h-full">
+        //         <CategoryProducts />
+        //     </div>
+        // </div>
+
+        <div className="bg-gray-50 p-20 w-full">
+            <TopBar />
+            <CategoryProducts />
         </div>
-    )
+    );
 }

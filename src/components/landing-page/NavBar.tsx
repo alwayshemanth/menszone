@@ -1,27 +1,14 @@
-import Image from "next/image";
+
 import Link from "next/link";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+
 import { CiShoppingCart } from "react-icons/ci";
 
 export default function NavBar() {
   return (
-    <nav className="flex items-center justify-between p-4 mt-2 h-12">
+    <nav className="flex items-center justify-between p-4 h-16 bg-gray-700 text-white">
       {/* Logo Section */}
       <div className="flex-shrink-0">
-        <Image
-          src="https://shorturl.at/D67DF"
-          alt="menszone"
-          width={120}
-          height={120}
-          className="object-contain"
-        />
+        <h1 className="font-bold"> Mens Zone </h1>
       </div>
 
       {/* Navigation Links */}

@@ -11,9 +11,9 @@ interface ProductCardProps {
   productDetails: ProductType;
 }
 
-export default function ProductCard({ productDetails }: ProductCardProps) {
+export default function CategoryItems({ productDetails }: ProductCardProps) {
   return (
-    <div className="m-4 p-4 flex flex-col items-center bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+    <div className="m-4 p-4 h-96 w-96 flex flex-col items-center justify-between bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
       
       <div className="relative overflow-hidden rounded-lg group">
         {productDetails.imageUrl && <Image

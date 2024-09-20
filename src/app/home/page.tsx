@@ -1,9 +1,9 @@
+import CategoryBar from "@/components/landing-page/CategoriesBar";
+
 export default function Home() {
     return (
-      <div>
-        <h1>
-          Hello from starting page
-        </h1>
+      <div className="bg-slate-100">
+        <CategoryBar />
       </div>
     );
   }
