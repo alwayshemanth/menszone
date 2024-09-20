@@ -26,64 +26,14 @@ export default function NavBar() {
 
       {/* Navigation Links */}
       <div className="flex items-center space-x-8">
-        <Link href="/" className="text-lg hover:text-gray-400">
+        <Link href="/home" className="text-lg hover:text-gray-400">
           Home
         </Link>
-        <Link href="/products" className="text-lg hover:text-gray-400">
+        <Link href="/home/products" className="text-lg hover:text-gray-400">
           All Products
         </Link>
 
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-lg hover:text-gray-400">
-                Categories
-              </NavigationMenuTrigger>
-              <NavigationMenuContent className=" mt-2 text-black shadow-lg rounded-md mb-2">
-                <NavigationMenuLink>
-                  <Link
-                    href="/clothing"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Clothing
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink>
-                  <Link
-                    href="/accessories"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Accessories
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink>
-                  <Link
-                    href="/grooming"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Grooming
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink>
-                  <Link
-                    href="/ethnic"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Ethnic wear
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink>
-                  <Link
-                    href="/sports"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Sports
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+      
 
         <Link href="/about" className="text-lg hover:text-gray-400">
           About Us

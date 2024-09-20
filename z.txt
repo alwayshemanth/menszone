@@ -1,0 +1,51 @@
+<NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="text-lg hover:text-gray-400">
+                Categories
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className=" mt-2 text-black shadow-lg rounded-md mb-2">
+                <NavigationMenuLink>
+                  <Link
+                    href="home/clothing"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Clothing
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink>
+                  <Link
+                    href="home/accessories"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Accessories
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink>
+                  <Link
+                    href="home/grooming"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Grooming
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink>
+                  <Link
+                    href="home/ethnic"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Ethnic wear
+                  </Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink>
+                  <Link
+                    href="home/sports"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Sports
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>

@@ -83,3 +83,44 @@ model Authenticator {
  
   @@id([userId, credentialID])
 }
+
+
+model Product {
+  id            Int       @id @default(autoincrement())
+  name          String
+  description   String?
+  categoryId    Int
+  brandId       Int?
+  price         Float
+  stockQuantity Int
+  size          String?   
+  color         String?
+  material      String?
+  weight        Float?    
+  discount      Float?   
+  imageUrl      String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime?  @updatedAt
+
+  category      Category  @relation(fields: [categoryId], references: [id])
+  brand         Brand?    @relation(fields: [brandId], references: [id])
+
+  @@index([categoryId])
+  @@index([price])
+  @@index([brandId])
+}
+
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  products Product[] // Relation to products
+
+  @@index([name])
+}
+
+model Brand {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  products Product[]
+}
+
