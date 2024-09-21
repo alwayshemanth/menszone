@@ -1,5 +1,8 @@
 import Image from "next/image";
-import { Button } from "../ui/button";
+
+import CardCard from "../cards/CartCard";
+import ReviewSection from "./ReviewSection";
+import CartButton from "../cards/CartButton";
 
 interface ProductType {
   id: number;
@@ -15,6 +18,7 @@ export default function ProductDetails({
   productDetails: ProductType | null;
 }) {
   // console.log(productDetails)
+  const productId = productDetails?.id;
   return (
     <div className="">
       <div className="bg-gray-50 pt-10 flex flex-col pl-96 pr-96">
@@ -31,16 +35,10 @@ export default function ProductDetails({
             <h1> {productDetails?.name} </h1>
             <p className="w-60"> {productDetails?.description}</p>
             <h1 className="mt-5"> ₹ {productDetails?.price}</h1>
-            <div className="flex mt-8">
-              <button className="w-10 bg-gray-200"> - </button>
-              <p className="text-center w-10 bg-gray-500 text-white"> 0 </p>
-              <button className="w-10 bg-gray-200"> + </button>
-            </div>
+            
+            <CardCard />
 
-            <Button className="mt-8 bg-gray-500 text-white" variant={"outline"}>
-              {" "}
-              Add to cart{" "}
-            </Button>
+            <CartButton productId = {productId} />
           </div>
         </div>
 
@@ -48,14 +46,13 @@ export default function ProductDetails({
           <h1> Product Description </h1>
           <p className="">
             {" "}
-            At Adro, we believe that fashion should be accessible to everyone,
-            and our brand is designed to offer high-quality clothing that is
-            both stylish and affordable.{" "}
+            {productDetails?.description}{" "}
           </p>
         </div>
 
         <div className="flex flex-col items-start justify-center mt-10 gap-3">
-          <h1> Customer reviews </h1>
+          <h1 className="font-bold"> Ratings & reviews </h1>
+          <ReviewSection productId = {productDetails?.id} />
         </div>
       </div>
     </div>

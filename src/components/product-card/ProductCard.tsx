@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProductType {
+  id:number,
   name: string;
   description: string | null;
   price: number;
@@ -13,6 +15,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ productDetails }: ProductCardProps) {
   return (
+    <Link href={`product/${productDetails.id}`}>
     <div className="m-4 p-4 flex flex-col items-center bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
       
       <div className="relative overflow-hidden rounded-lg group">
@@ -33,5 +36,6 @@ export default function ProductCard({ productDetails }: ProductCardProps) {
         </span>
       </div>
     </div>
+    </Link>
   );
 }

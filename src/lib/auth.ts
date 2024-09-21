@@ -28,6 +28,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             password: true,
             email: true,
             id: true,
+
           },
         });
 
@@ -51,4 +52,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
+  
 });

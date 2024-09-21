@@ -23,6 +23,7 @@ model User {
   cart          Cart[]
   accounts      Account[]
   sessions      Session[]
+  productreview ProductReview[]
   // Optional for WebAuthn support
   Authenticator Authenticator[]
 
@@ -94,6 +95,7 @@ model Product {
   price         Float
   stockQuantity Int
   cart Cart[]
+  productreview ProductReview[]
   size          String?
   color         String?
   material      String?
@@ -134,5 +136,20 @@ model Cart {
   productId Int
   product Product @relation(fields: [productId], references: [id])
 
+  // quantity Int
+
   @@unique([userId,productId])
 }
+
+model ProductReview {
+  product_id Int @id @default(autoincrement())
+  rating Int
+  reviewDescription String 
+  email String
+  user User @relation(fields: [email], references: [id])
+
+  productId Int 
+  product Product @relation(fields: [productId], references: [id])
+}
+
+
