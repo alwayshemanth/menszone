@@ -2,7 +2,12 @@
 import CategoryProducts from "@/components/categories/CategoryProducts";
 import TopBar from "@/components/landing-page/TopBar";
 
-export default function Sports() {
+import { getCategory } from "@/utlity";
+
+export default async function Clothing() {
+    const category = "Clothing";
+
+    const categoryId = await getCategory(category)
     return (
         // <div className="flex flex-row h-full bg-slate-400 pl-40 pr-40">
         //     <div className="w-1/4">
@@ -14,8 +19,8 @@ export default function Sports() {
         // </div>
 
         <div className="bg-gray-50 p-20 w-full">
-            <TopBar />
-            <CategoryProducts />
+            <TopBar categoryName = {category}/>
+            <CategoryProducts categoryId = {categoryId}/>
         </div>
     );
 }

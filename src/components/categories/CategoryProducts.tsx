@@ -2,10 +2,11 @@ import { prisma } from "@/db/prisma";
 
 import CategoryItems from "../product-card/CategoryItems";
 
-async function getProductsByCategory() {
+async function getProductsByCategory(categoryId : number | undefined) {
+  // console.log(categoryId)
   const products = await prisma.product.findMany({
     where: {
-      categoryId: 4,
+      categoryId : categoryId
     },
     select: {
       id: true,
@@ -15,12 +16,14 @@ async function getProductsByCategory() {
       imageUrl: true,
     },
   });
-
+  // console.log(products)
   return products;
 }
 
-export default async function CategoryProducts() {
-  const productsByCategory = await getProductsByCategory();
+export default async function CategoryProducts({categoryId} : {categoryId : number | undefined}) {
+  // console.log(categoryId)
+  const productsByCategory = await getProductsByCategory(categoryId);
+  // console.log(productsByCategory)
   // console.log("Hi")
   // console.log(typeof(productsByCategory[0].price))
   // console.log(productsByCategory[0].price)
