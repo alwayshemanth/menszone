@@ -42,6 +42,7 @@ export default function ProductFilters({
   useEffect(() => {
     if (formValues) {
       setQueryParams(formValues);
+      // console.log(formValues)
     }
   }, [formValues, setQueryParams, searchParams]);
 
@@ -151,21 +152,6 @@ export default function ProductFilters({
                                           );
                                     }}
                                   />
-
-                                  
-
-                                  {/* <Checkbox
-            checked={field.value?.includes(item.value)}
-            onCheckedChange={(checked) => {
-              if (checked) {
-                field.onChange([...(field.value || []), item.value]); // Add rating
-              } else {
-                field.onChange(
-                  field.value?.filter((value) => value !== item.value) // Remove rating
-                );
-              }
-            }}
-          />*/}
                                 </FormControl>
                                 <FormLabel className="text-sm font-normal">
                                   {item.label}
@@ -191,15 +177,15 @@ export default function ProductFilters({
                   name="pricerange"
                   render={() => (
                     <FormItem className="flex flex-wrap gap-2 space-y-0">
-                      {price.priceRange.map((item, index) => (
+                      {price.priceRange.map((item) => (
                         <FormField
-                          key={index}
+                          key={item.id}
                           control={form.control}
                           name="pricerange"
                           render={({ field }) => {
                             return (
                               <FormItem
-                                key={index}
+                                key={item.id}
                                 className="flex items-center space-y-0 group"
                               >
                                 <FormControl>
@@ -210,7 +196,7 @@ export default function ProductFilters({
                                       checked
                                         ? field.onChange([
                                             ...(field.value || []),
-                                            item,
+                                            item.value,
                                           ])
                                         : field.onChange(
                                             field.value?.filter(

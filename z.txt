@@ -54,3 +54,11 @@
         price 
         category 
         rating
+
+
+        {
+  category: [ 'clothing', 'grooming' ],
+  rating: [ '1' ],
+  sortby: 'postedat_desc',
+  page: 1
+}
