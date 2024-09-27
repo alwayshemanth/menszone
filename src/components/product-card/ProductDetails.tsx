@@ -3,6 +3,7 @@ import Image from "next/image";
 import CardCard from "../cards/CartCard";
 import ReviewSection from "./ReviewSection";
 import CartButton from "../cards/CartButton";
+import PostReview from "../cards/PostReview";
 
 interface ProductType {
   id: number;
@@ -53,6 +54,9 @@ export default function ProductDetails({
         <div className="flex flex-col items-start justify-center mt-10 gap-3">
           <h1 className="font-bold"> Ratings & reviews </h1>
           <ReviewSection productId = {productDetails?.id} />
+          <div>
+            <PostReview />
+          </div>
         </div>
       </div>
     </div>
