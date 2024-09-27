@@ -49,3 +49,8 @@
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
+
+
+        price 
+        category 
+        rating

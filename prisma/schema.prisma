@@ -152,4 +152,14 @@ model ProductReview {
   product Product @relation(fields: [productId], references: [id])
 }
 
+enum CategoryEnum {
+    clothing
+    grooming
+    accessories
+}
 
+enum WorkMode {
+  remote
+  hybrid
+  office
+}
