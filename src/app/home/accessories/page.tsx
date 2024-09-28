@@ -5,7 +5,7 @@ import TopBar from "@/components/landing-page/TopBar";
 import { getCategory } from "@/utlity";
 
 export default async function Accessories() {
-    const category = "Accessories";
+    const category = "accessories";
 
     const categoryId = await getCategory(category)
     return (

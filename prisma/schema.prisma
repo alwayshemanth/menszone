@@ -143,10 +143,10 @@ model Cart {
 
 model ProductReview {
   product_id Int @id @default(autoincrement())
-  rating Int
+  rating Int @default(0)
   reviewDescription String 
-  email String
-  user User @relation(fields: [email], references: [id])
+  emailhere String
+  user User @relation(fields: [emailhere], references: [email])
 
   productId Int 
   product Product @relation(fields: [productId], references: [id])

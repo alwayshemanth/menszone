@@ -4,6 +4,7 @@ import CardCard from "../cards/CartCard";
 import ReviewSection from "./ReviewSection";
 import CartButton from "../cards/CartButton";
 import PostReview from "../cards/PostReview";
+import { auth } from "@/lib/auth";
 
 interface ProductType {
   id: number;
@@ -13,12 +14,19 @@ interface ProductType {
   price: number;
 }
 
-export default function ProductDetails({
+export default async function ProductDetails({
   productDetails,
 }: {
   productDetails: ProductType | null;
 }) {
+  const session = await auth()
+  
   // console.log(productDetails)
+
+
+  // user: { email: 'user1@gmail.com' },
+  // expires: '2024-10-28T10:18:18.226Z'
+
   const productId = productDetails?.id;
   return (
     <div className="">
@@ -55,7 +63,7 @@ export default function ProductDetails({
           <h1 className="font-bold"> Ratings & reviews </h1>
           <ReviewSection productId = {productDetails?.id} />
           <div>
-            <PostReview />
+            <PostReview productId = {productId} email = {session?.user?.email}/>
           </div>
         </div>
       </div>
