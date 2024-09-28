@@ -33,7 +33,7 @@ export default function PostReview({email , productId} : emailType ) {
   }
 
   return (
-    <div className="pl-7 flex flex-row items-start space-x-4 bg-gray-50 dark:bg-gray-900 p-5 rounded-lg shadow-sm">
+    <div className="flex flex-row items-start space-x-4 ml-32 bg-gray-50 dark:bg-gray-900 p-5 rounded-lg shadow-sm">
       <Textarea
         value={review}
         onChange={handler}

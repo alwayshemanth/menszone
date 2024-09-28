@@ -61,9 +61,9 @@ export default async function ProductDetails({
 
         <div className="flex flex-col items-start justify-center mt-10 gap-3">
           <h1 className="font-bold"> Ratings & reviews </h1>
-          <ReviewSection productId = {productDetails?.id} />
           <div>
             <PostReview productId = {productId} email = {session?.user?.email}/>
+            <ReviewSection productId={productDetails?.id}/>
           </div>
         </div>
       </div>

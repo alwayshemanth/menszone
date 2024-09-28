@@ -1,19 +1,22 @@
-interface reviewType 
-    {
-        product_id: number;
-    rating: number;
+interface ReviewType {
+    product_id: number;
     reviewDescription: string;
-    email: string;
-    }
+    emailhere: string;
+}
 
-    interface FinalType 
-        {reviewDetails : reviewType}
-    
-export default function ReviewCard({reviewDetails} : FinalType ) {
-    // console.log(reviewDetails)
+interface FinalType {
+    reviewDetails: ReviewType;
+}
+
+export default function ReviewCard({ reviewDetails }: FinalType) {
     return (
-        <div>
-            <h1> Review by : {reviewDetails.email}</h1>
+        <div className="bg-black p-5">
+            <h1 className="text-xl font-semibold text-gray-800 mb-2">
+                Review by: <span className="text-blue-600">{reviewDetails.emailhere}</span>
+            </h1>
+            <p className="text-gray-600 text-md">
+                <span className="font-medium">Review:</span> {reviewDetails.reviewDescription}
+            </p>
         </div>
-    )
+    );
 }

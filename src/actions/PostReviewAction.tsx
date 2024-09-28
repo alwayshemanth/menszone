@@ -16,7 +16,6 @@ export default async function PostReviewAction(email: string | null | undefined,
             reviewDescription: review,
             emailhere : email,
             productId: productId, // This should be a number and not undefined
-            rating : 4
         }
     });
 
