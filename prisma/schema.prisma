@@ -70,7 +70,7 @@ model VerificationToken {
   @@id([identifier, token])
 }
 
-// Optional for WebAuthn support
+
 model Authenticator {
   credentialID         String  @unique
   userId               String
@@ -117,7 +117,7 @@ model Product {
 model Category {
   id       Int       @id @default(autoincrement())
   name     String    @unique
-  products Product[] // Relation to products
+  products Product[] 
   imageUrl String?
 
   @@index([name])
@@ -156,10 +156,4 @@ enum CategoryEnum {
     clothing
     grooming
     accessories
-}
-
-enum WorkMode {
-  remote
-  hybrid
-  office
 }
